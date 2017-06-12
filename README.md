@@ -34,10 +34,9 @@ This script will:
 	* `SLACK_URL`: The [Slack incoming webhook URL](https://api.slack.com/incoming-webhooks)
 	* `SLACK_CHANNEL`: The Slack channel to post notifications to
 3. Add an [SSH key to Pantheon](https://pantheon.io/docs/ssh-keys/) and [to the CircleCI project](https://circleci.com/docs/permissions-and-access-during-deployment/).
-4. Update the site UUID in the `.env` file
-5. Update _scenarios_ in `backstop.js` with URLs for pages you wish to check with visual regression
+4. Update _scenarios_ in `backstop.js` with URLs for pages you wish to check with visual regression
 	* `url` refers to the live URL and `referenceUrl` refers to the same page on the Pantheon multidev environment
-6. Ping the [CircleCI API](https://circleci.com/docs/api/) at the desired frequency, e.g. daily, to run the script
+5. Ping the [CircleCI API](https://circleci.com/docs/api/) at the desired frequency, e.g. daily, to run the script
 
 ## Notes ##
 This workflow assumes the `master` branch (dev) and test environments on Pantheon are always in a shippable state as the script will automatically deploy changes from dev to test and live.
