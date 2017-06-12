@@ -106,12 +106,12 @@ else
         # merge the multidev back to dev
         echo -e "\nMerging the ${TERMINUS_ENV} multidev back into the dev environment (master)..."
         php -f bin/slack_notify.php pantheon_deploy dev
-        terminus multidev:merge-to-dev $SITE_UUID.$TERMINUS_ENV
+     #   terminus multidev:merge-to-dev $SITE_UUID.$TERMINUS_ENV
         
         # deploy to test
         echo -e "\nDeploying the updates from dev to test..."
         php -f bin/slack_notify.php pantheon_deploy test
-        terminus env:deploy $SITE_UUID.test --sync-content --cc --note="Auto deploy of Drupal updates (core, modules)" --updatedb
+       # terminus env:deploy $SITE_UUID.test --sync-content --cc --note="Auto deploy of Drupal updates (core, modules)" --updatedb
 
         # backup the live site
         echo -e "\nBacking up the live environment..."
@@ -121,7 +121,7 @@ else
         # deploy to live
         echo -e "\nDeploying the updates from test to live..."
         php -f bin/slack_notify.php pantheon_deploy live
-        terminus env:deploy $SITE_UUID.live --cc --note="Auto deploy of Drupal updates (core, modules)" --updatedb
+      #  terminus env:deploy $SITE_UUID.live --cc --note="Auto deploy of Drupal updates (core, modules)" --updatedb
 
         echo -e "\nVisual regression tests passed! Drupal updates deployed to live..."
         php -f bin/slack_notify.php wizard_done `find . | grep document_0_desktop | grep test`
