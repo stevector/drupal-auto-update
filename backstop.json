@@ -9,7 +9,7 @@
   "scenarios": [
     {
       "label": "Homepage",
-      "url": "http://live-persch-bikes.pantheonsite.io/",
+      "url": "http://persch-bikes.pantheontraining.club/",
       "referenceUrl": "https://update-dr-persch-bikes-updates.pantheonsite.io/",
       "hideSelectors": [],
       "selectors": [
