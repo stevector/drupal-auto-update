@@ -10,7 +10,7 @@
     {
       "label": "Homepage",
       "url": "http://persch-bikes.pantheontraining.club/",
-      "referenceUrl": "https://update-dr-persch-bikes-updates.pantheonsite.io/",
+      "referenceUrl": "https://update-dr-persch-bikes.pantheonsite.io/",
       "hideSelectors": [],
       "selectors": [
         "document"
