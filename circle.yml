@@ -3,7 +3,7 @@ machine:
     America/Chicago
 
   node:
-    version: 4.2.6
+    version: 6.1.0
 
   php:
     version: 7.0.11
@@ -35,7 +35,7 @@ dependencies:
     - npm install -g slimerjs
 
     # Install Terminus
-    - composer global require -n  "pantheon-systems/terminus:^1"
+    - composer global require -n  "pantheon-systems/terminus:1.4.1"
 
   override:
     - ./bin/drupal-auto-update.sh
